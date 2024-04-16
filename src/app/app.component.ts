@@ -16,4 +16,7 @@ export class AppComponent {
     d3 : "text3",
     d4 : "text4",
   };
+  colorFunction() {
+    return "purple";
+  }
 }
