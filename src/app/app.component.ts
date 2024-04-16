@@ -10,4 +10,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Project2';
+  data = {
+    d1 : "text1",
+    d2 : "text2",
+    d3 : "text3",
+    d4 : "text4",
+  };
 }
