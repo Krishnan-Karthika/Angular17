@@ -10,13 +10,28 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Project2';
-  data = {
-    d1 : "text1",
-    d2 : "text2",
-    d3 : "text3",
-    d4 : "text4",
-  };
-  colorFunction() {
-    return "purple";
+  mrngMsg: string = "Good Morning";
+  noonMsg: string = "Good Afternoon";
+  displayMsg: string = "";
+  evenOrOdd: string = "even";
+
+  showMrngMsg() {
+    this.displayMsg = ", "+this.mrngMsg;
+  }
+  showNoonMsg() {
+    this.displayMsg = ", "+this.noonMsg;
+  }
+
+  count = 0;
+  incrementFn() {
+    this.count++;
+    this.showNature();
+  }
+  decrementFn() {
+    this.count--;
+    this.showNature();
+  }
+  showNature() {
+    this.evenOrOdd = this.count%2 == 0 ? "even" : "odd";
   }
 }

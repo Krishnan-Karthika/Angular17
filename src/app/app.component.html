@@ -1,20 +1,17 @@
-<!-- interpolation -->
-<h2 style="text-align: center;">Welcome to {{title}} Hello World</h2>
+<!-- EVENT BINDING -->
 
-<h1 style="text-align: center;">intendation for dataa in object</h1>
+<!-- create 2 buttons - Good morning and good afternoon. When clicked on a button, display "hey Friends, " followed by button text-->
+<h2 style="text-align: center;">EVENT BINDING</h2>
+<h2 style="text-align: center;">Hey friends{{displayMsg}}</h2>
 
-<h2 style="text-align: center;">Data in object: {{data.d1}}</h2>
-<h2 style="text-align: center;">Data in object: {{data.d2}}</h2>
-<h2 style="text-align: center;">Data in object: {{data.d3}}</h2>
-<h2 style="text-align: center;">Data in object: {{data.d4}}</h2>
+<button (click)="showMrngMsg()">{{mrngMsg}}</button>
+<button (click)="showNoonMsg()">{{noonMsg}}</button>
 
-<div style="text-align: center;">
-  <input type="text" value="testing">  
-  <input type="text" value="{{data.d1}}">    <!-- interpolation in input field -->
-</div>
 
-<!-- style binging -->
-<div class="style-bind" [style.background-color]="colorFunction()">
-  <input type="text" value="testing">  
-  <input type="text" value="{{data.d1}}">
+<!-- show count value, set initial value as 0. Give 2 btns to increment and decrement. SHow updated count value. -->
+<div>
+  <h2>count = {{count}}</h2>
+  <h4>Count number is {{evenOrOdd}}</h4>
+  <button (click)="incrementFn()">Increment</button>
+  <button (click)="decrementFn()">Decrement</button>
 </div>
