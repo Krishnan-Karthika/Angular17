@@ -1,17 +1,18 @@
-<!-- EVENT BINDING -->
+<!--  two way binding -->
 
-<!-- create 2 buttons - Good morning and good afternoon. When clicked on a button, display "hey Friends, " followed by button text-->
-<h2 style="text-align: center;">EVENT BINDING</h2>
-<h2 style="text-align: center;">Hey friends{{displayMsg}}</h2>
+<div style="text-align: center;">
+  <input type="text" [(ngModel)]="data">
+</div>
 
-<button (click)="showMrngMsg()">{{mrngMsg}}</button>
-<button (click)="showNoonMsg()">{{noonMsg}}</button>
+<!-- display whether the number entered is even or odd -->
+<!-- when value entered -->
+<div style="text-align: center;">
+  <input type="number" [(ngModel)]="intValue" (input)="checkValue()">{{intValue}} is {{output}}
+</div>
 
-
-<!-- show count value, set initial value as 0. Give 2 btns to increment and decrement. SHow updated count value. -->
+<!-- when btn clicked -->
 <div>
-  <h2>count = {{count}}</h2>
-  <h4>Count number is {{evenOrOdd}}</h4>
-  <button (click)="incrementFn()">Increment</button>
-  <button (click)="decrementFn()">Decrement</button>
+  <input type="number" [(ngModel)]="intValue">
+  <button (click)="checkValue()">Check</button>
+  <p >The number {{ tempVal }} is {{ output }}</p>
 </div>
