@@ -1,14 +1,17 @@
 <!-- structural directive -->
 
 <!-- create an array of fruits with name and price and display those values in a table -->
+<!-- only display fruits with price > 300 -->
 <table class="my-table">
   <tr>
     <th>Name</th>
     <th>Price</th>
   </tr>
-  <tr *ngFor="let fruit of fruits">
-    <td>{{fruit.name}}</td>
-    <td>{{fruit.price}}</td>
-  </tr>
+  <ng-container *ngFor="let fruit of fruits">
+    <tr *ngIf="fruit.price>300">
+      <td>{{fruit.name}}</td>
+      <td>{{fruit.price}}</td>
+    </tr>    
+  </ng-container>
 </table>
 

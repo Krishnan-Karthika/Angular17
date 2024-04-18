@@ -13,11 +13,11 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   title = 'Project2';
   fruits: Fruits[] = [
-    {name: 'Mango', price:50},
-    {name: 'Apple', price:50},
-    {name: 'Grape', price:50},
-    {name: 'Guava', price:50},
-    {name: 'Papaya', price:50}
+    {name: 'Mango', price:150},
+    {name: 'Apple', price:250},
+    {name: 'Grape', price:350},
+    {name: 'Guava', price:450},
+    {name: 'Papaya', price:550}
   ]
 }
 
