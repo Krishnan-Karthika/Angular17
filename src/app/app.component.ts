@@ -1,23 +1,27 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,FormsModule],
+  imports: [RouterOutlet,FormsModule,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'Project2';
-  data:string = "test string";
-  intValue:number = 0;
-  tempVal:number=0;
-  output:string="even";
+  fruits: Fruits[] = [
+    {name: 'Mango', price:50},
+    {name: 'Apple', price:50},
+    {name: 'Grape', price:50},
+    {name: 'Guava', price:50},
+    {name: 'Papaya', price:50}
+  ]
+}
 
-  checkValue() {
-    this.tempVal = this.intValue;
-    this.output = this.intValue%2 == 0 ? "even" : "odd";
-  }
+interface Fruits {
+  name: string,
+  price: number
 }

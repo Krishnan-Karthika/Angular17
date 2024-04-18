@@ -1,18 +1,14 @@
-<!--  two way binding -->
+<!-- structural directive -->
 
-<div style="text-align: center;">
-  <input type="text" [(ngModel)]="data">
-</div>
+<!-- create an array of fruits with name and price and display those values in a table -->
+<table class="my-table">
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+  </tr>
+  <tr *ngFor="let fruit of fruits">
+    <td>{{fruit.name}}</td>
+    <td>{{fruit.price}}</td>
+  </tr>
+</table>
 
-<!-- display whether the number entered is even or odd -->
-<!-- when value entered -->
-<div style="text-align: center;">
-  <input type="number" [(ngModel)]="intValue" (input)="checkValue()">{{intValue}} is {{output}}
-</div>
-
-<!-- when btn clicked -->
-<div>
-  <input type="number" [(ngModel)]="intValue">
-  <button (click)="checkValue()">Check</button>
-  <p >The number {{ tempVal }} is {{ output }}</p>
-</div>
